@@ -96,7 +96,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
           <div className='flex items-center gap-2 lg:gap-3'>
-            <Link
+            {/* <Link
               href='#'
               className='text-lg font-medium hover:text-primary hidden xl:block'>
               <Icon
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
                 className='text-primary text-3xl lg:text-2xl inline-block me-2'
               />
               +1(909) 235-9814
-            </Link>
+            </Link> */}
             {/* <button
               className='hidden lg:block text-primary duration-300 bg-primary/15 hover:text-white hover:bg-primary font-medium text-lg py-2 px-6 rounded-full hover:cursor-pointer'
               onClick={() => {
