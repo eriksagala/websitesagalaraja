@@ -35,13 +35,13 @@ const Gallery = () => {
   }, [])
 
   return (
-    <section id='menu' className='scroll-mt-20'>
+    <section id='informasi' className='scroll-mt-20'>
       <div className='container'>
         <div className='text-center'>
-          <p className='text-primary text-lg font-normal mb-3 tracking-widest uppercase'>
-            Our Menu
+          <p className='text-primary text-lg md:text-2xl font-normal mb-3 tracking-widest uppercase'>
+            AGENDA KEGIATAN
           </p>
-          <h2>Explore Our Signature Dishes</h2>
+          <h2>Kegiatan Utama Punguan Sagalaraja</h2>
         </div>
         <div className='my-16 px-6'>
           <Masonry
@@ -75,7 +75,7 @@ const Gallery = () => {
                         <Link
                           href='#'
                           className='text-white rounded-full bg-primary border duration-300 border-primary py-2 lg:px-6 md:px-4 px-3 hover:bg-primary/40 hover:backdrop-blur-xs md:text-base text-sm'>
-                          Learn More
+                          Selengkapnya
                         </Link>
                       </div>
                     </div>
@@ -87,7 +87,7 @@ const Gallery = () => {
           <button
             className='px-6 py-2 border border-primary rounded-full text-base font-medium text-white bg-primary hover:bg-primary/20 hover:text-primary hover:cursor-pointer transition ease-in-out duration-300'
             onClick={openMenu}>
-            View More
+            Selengkapnya
           </button>
           {/* menu pop-up */}
           {isMenuOpen && (

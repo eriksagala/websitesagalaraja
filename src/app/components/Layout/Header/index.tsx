@@ -86,11 +86,11 @@ const Header: React.FC = () => {
         sticky ? 'shadow-lg bg-white' : 'shadow-none'
       }`}>
       <div>
-        <div className='container flex items-center justify-between'>
+        <div className='container-fluid flex items-center justify-between px-3'>
           <div>
             <Logo />
           </div>
-          <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6  justify-center'>
+          <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6  justify-end'>
             {headerLink.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}

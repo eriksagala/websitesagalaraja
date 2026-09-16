@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react'
 
 const Newsletter = () => {
   return (
-    <section className='relative overflow-hidden md:py-20'>
+    <section id='galeri' className='relative overflow-hidden md:py-20'>
       <div className='container'>
         <div className='bg-primary rounded-Newsletter grid grid-cols-1 gap-y-10 gap-x-6 md:grid-cols-12 xl:gap-x-8'>
           <div className='md:col-span-7'>
