@@ -1,10 +1,12 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
 import { FeaturesType } from '@/app/types/features'
 import FeaturesSkeleton from '../../Skeleton/Features'
+import { FadeInWhenVisible } from '@/app/components/Common/MotionWrapper'
 
 const Features = () => {
   const [features, setFeatures] = useState<FeaturesType[]>([])
@@ -27,42 +29,56 @@ const Features = () => {
   }, [])
 
   return (
-    <section id='features'>
-      <div className='container'>
-        <div className='text-center mb-14'>
-          <p className='text-primary text-lg font-normal tracking-widest uppercase'>
-            Why Choose Us
-          </p>
-          <h2 className='font-semibold lg:max-w-60% mx-auto mt-3'>
-            Experience More Than Just a Meal
-          </h2>
-        </div>
-        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-y-28 gap-x-6 mt-24'>
-          {loading
-            ? Array.from({ length: 4 }).map((_, i) => (
-                <FeaturesSkeleton key={i} />
-              ))
-            : features.map((items, i) => (
-                <div
-                  key={i}
-                  className='p-8 relative rounded-3xl bg-linear-to-b from-primary/10 to-white shadow-md hover:scale-105 transition duration-300 ease-in-out hover:cursor-pointer'>
-                  <div className='rounded-full flex justify-center absolute -top-[50%] sm:top-[-40%] md:top-[-55%] lg:top-[-35%] left-[0%]'>
-                    <Image
-                      src={items.imgSrc}
-                      alt={items.imgSrc}
-                      width={510}
-                      height={10}
-                    />
+    <section id='features' className='py-20 overflow-hidden'>
+      {/* Menggunakan w-full dan px-4 sm:px-8 agar membentang penuh ke kanan-kiri */}
+      <div className='w-full max-w-[1440px] mx-auto px-4 sm:px-8'>
+        
+        {/* Bagian Judul (Dibungkus Animasi) */}
+        <FadeInWhenVisible>
+          <div className='text-center mb-14'>
+            <p className='text-primary text-lg font-semibold tracking-widest uppercase'>
+              MAHAKARYA & PROGRAM
+            </p>
+            <h2 className='font-semibold text-3xl sm:text-4xl lg:max-w-[60%] mx-auto mt-4 text-black'>
+              Pilar Utama Punguan Sagalaraja
+            </h2>
+          </div>
+        </FadeInWhenVisible>
+
+        {/* Grid 5 kolom (Dibungkus Animasi dengan Jeda) */}
+        <FadeInWhenVisible delay={0.2}>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-16 gap-x-4 mt-20'>
+            {loading
+              ? Array.from({ length: 5 }).map((_, i) => (
+                  <FeaturesSkeleton key={i} />
+                ))
+              : features.map((items, i) => (
+                  <div
+                    key={i}
+                    className='p-5 pt-14 relative rounded-3xl bg-gradient-to-b from-primary/10 to-white shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ease-in-out hover:cursor-pointer flex flex-col items-center justify-start h-full'
+                  >
+                    {/* Container Lingkaran Gambar */}
+                    <div className='w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 p-3 absolute -top-12 left-1/2 -translate-x-1/2'>
+                      <Image
+                        src={items.imgSrc}
+                        alt={items.heading}
+                        width={80}
+                        height={80}
+                        className='object-contain max-h-full w-auto'
+                      />
+                    </div>
+
+                    <p className='text-lg font-semibold text-black text-center mt-2 leading-snug'>
+                      {items.heading}
+                    </p>
+                    <p className='text-xs sm:text-sm font-normal text-black/60 text-center mt-3 leading-relaxed'>
+                      {items.subheading}
+                    </p>
                   </div>
-                  <p className='text-2xl text-black font-semibold text-center mt-16'>
-                    {items.heading}
-                  </p>
-                  <p className='text-base font-normal text-black/50 text-center mt-2 leading-6'>
-                    {items.subheading}
-                  </p>
-                </div>
-              ))}
-        </div>
+                ))}
+          </div>
+        </FadeInWhenVisible>
+
       </div>
     </section>
   )

@@ -32,14 +32,14 @@ export default function ScrollToTop() {
   return (
     <div className='fixed bottom-8 right-8 z-999'>
       <div className='flex items-center gap-2.5'>
-        <Link
-          href={
-            'https://getnextjstemplates.com/products/chefs-kitchen-free-nextjs-landing-page-template'
-          }
-          target='_blank'
-          className='hidden lg:block bg-primary text-white hover:bg-darkmode text-sm px-4 py-3.5 leading-none rounded-lg font-medium text-nowrap'>
-          Download Now
-        </Link>
+        <a
+  href='https://wa.me/6285959695028?text=Halo%20Admin%20Sagalaraja,%20saya%20ingin%20bertanya%20seputar%20Punguan%20Sagalaraja.'
+  target='_blank'
+  rel='noopener noreferrer'
+  className='hidden lg:block bg-primary text-white hover:bg-darkmode text-sm px-4 py-3.5 leading-none rounded-lg font-medium text-nowrap'
+>
+  Hubungi Admin
+</a>
         {isVisible && (
           <div
             onClick={scrollToTop}

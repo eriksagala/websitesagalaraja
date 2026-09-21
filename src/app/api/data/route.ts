@@ -8,141 +8,205 @@ import { FooterLinkType } from '@/app/types/footerlink'
 import { FullMenuType } from '@/app/types/fullmenu'
 
 const HeaderData: HeaderItem[] = [
-  { label: 'About Us', href: '/#aboutus' },
-  { label: 'Menu', href: '/#menu' },
-  { label: 'Reserve Table', href: '/#reserve' },
-  { label: 'Docs', href: '/documentation' },
+  { label: 'Beranda', href: '/#beranda' },
+  { label: 'Tentang Sagalaraja', href: '/#aboutus' },
+  { label: 'Organisasi', href: '/#organisasi' }, // UBAH INI (sebelumnya /#menu)
+  { label: 'Informasi', href: '/#informasi' },  // UBAH INI (sebelumnya /#reserve)
+  { label: 'Galeri', href: '/#galeri' },
 ]
 
 const FeaturesData: FeaturesType[] = [
   {
-    imgSrc: '/images/Features/featureOne.svg',
-    heading: 'Elegant Dining Atmosphere',
+  imgSrc: '/images/Features/tugupolos.png', // Mengarahkan langsung ke gambar tugu
+  heading: 'Tugu Sagalaraja',
+  subheading:
+    'Monumen megah sebagai simbol pemersatu, penghormatan kepada leluhur, dan identitas fisik keluarga besar Sagalaraja se-dunia.',
+},
+  {
+    imgSrc: '/images/Features/tarombo.png',
+    heading: 'Tarombo Sagalaraja',
     subheading:
-      'Enjoy a warm, refined space perfect for intimate dinners or small group gatherings.',
+      'Pendataan dan pemetaan silsilah keturunan Sagalaraja yang tersusun sistematis untuk menjaga histori serta garis keturunan generasi ke generasi.',
   },
   {
-    imgSrc: '/images/Features/featureThree.svg',
-    heading: 'Signature Chef Creations',
+    imgSrc: '/images/Features/beasiswa.png',
+    heading: 'Beasiswa & Pendidikan',
     subheading:
-      'Taste one-of-a-kind dishes crafted with passion by our top culinary team.',
+      'Bantuan dana pendidikan dan apresiasi bagi generasi muda Sagalaraja yang berprestasi di bidang akademik maupun non-akademik.',
   },
   {
-    imgSrc: '/images/Features/featureTwo.svg',
-    heading: 'Fresh, Local Ingredients',
+    imgSrc: '/images/Features/adat.png',
+    heading: 'Pelestarian Adat dan Budaya',
     subheading:
-      'We use locally sourced goods daily for unmatched taste and quality.',
+      'Edukasi tata cara adat, makna Ulos, dan pelestarian bahasa Batak bagi generasi penerus agar tradisi luhur Sagalaraja tetap lestari.',
   },
   {
-    imgSrc: '/images/Features/featureFour.svg',
-    heading: 'Hassle-Free Reservations',
+    imgSrc: '/images/Features/umkm.png',
+    heading: 'Pemberdayaan Ekonomi & UMKM',
     subheading:
-      'Reserve online in seconds or walk in anytime — we’re ready when you are.',
+      'Pemberdayaan usaha lokal, bantuan modal, dan promosi produk unggulan dari Huta Sagala ke tingkat nasional hingga global.',
   }
 ]
 
 const ExpertChiefData: ExpertChiefType[] = [
   {
-    profession: 'Senior Chef',
-    name: 'Marco Benton',
-    imgSrc: '/images/Expert/boyone.png',
+    profession: 'Ketua Umum',
+    name: 'St. Drs. Maringan Sagala',
+    imgSrc: '/images/Expert/placeholder.png',
   },
   {
-    profession: 'Junior Chef',
-    name: 'Elena Rivera',
-    imgSrc: '/images/Expert/girl.png',
+    profession: 'Ketua I',
+    name: 'Brigjen (Purn. AD) Hotman Sagala',
+    imgSrc: '/images/Expert/placeholder.png',
   },
   {
-    profession: 'Junior Chef',
-    name: 'John Doe',
-    imgSrc: '/images/Expert/boytwo.png',
+    profession: 'Ketua II',
+    name: 'Erwin Sagala, S.E.',
+    imgSrc: '/images/Expert/placeholder.png', // Gambar siluet netral
   },
+  {
+    profession: 'Ketua III',
+    name: 'Ir. Darlin Sagala, M.Si.',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Ketua IV',
+    name: 'Ir. Joakim Sagala',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Ketua V',
+    name: 'H. Hasan Basri Sagala, S.E.',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Ketua VI',
+    name: 'Joni Sagala, S.E.',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Sekretaris Jenderal',
+    name: 'Josua Sagala, S.Sos.',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Sekretaris I',
+    name: 'Erik Sagala, S.Kom.',
+    imgSrc: '/images/Expert/erik.jpg',
+    ttl: 'Perawang, 02 Mei 1995',
+    jobProfession: 'IT Data and MIS Specialist',
+    commitment: 'Aktif dalam kepengurusan Pengurus Pusat Sagala Raja, mengelola administrasi kesekretariatan secara profesional, dan melestarikan nilai-nilai kekeluargaan antaranggota.',
+  },
+  {
+    profession: 'Sekretaris II',
+    name: 'Herdin Sagala, S.Sos., M.Si.',
+    imgSrc: '/images/Expert/placeholder.png',
+    bio: 'Lahir di Tapanuli Utara, 15 Juni 1990. Berprofesi sebagai Administrasi Perkantoran. Aktif dalam kepengurusan Pengurus Pusat Sagala Raja serta berkomitmen penuh dalam memajukan organisasi dan melestarikan nilai-nilai kekeluargaan.',
+  },
+  {
+    profession: 'Sekretaris III',
+    name: 'Drs. Jaharap Sagala',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Sekretaris IV',
+    name: 'Flores Sagala, S.E.',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Bendahara Umum',
+    name: 'Dr. Wannen Pakpahan, M.M.',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Wakil Bendahara Umum',
+    name: 'Pnt. Winter Sigiro, S.H., M.H.',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+
 ]
 
 const GalleryImagesData: GalleryImagesType[] = [
   {
-    src: '/images/Gallery/foodone.webp',
-    name: 'Caesar Salad(187 Kcal)',
-    price: 35,
+    src: '/images/Gallery/pestabolon.jpg',
+    name: 'Pesta Bolon Sagalaraja Se-Dunia',
   },
   {
-    src: '/images/Gallery/foodtwo.webp',
-    name: 'Christmas salad(118 Kcal)',
-    price: 17,
+    src: '/images/Gallery/martumba.jpg',
+    name: 'Martumba dan Tari Sawan',
   },
   {
-    src: '/images/Gallery/foodthree.webp',
-    name: 'Sauteed mushrooms with pumpkin bowl(238 kcal)',
-    price: 45,
+    src: '/images/Gallery/pelantikan.jpg',
+    name: 'Pelantikan BPH Periode 2026-2030',
   },
   {
-    src: '/images/Gallery/foodfour.webp',
-    name: 'BBQ Chicken Feast Pizza(272 kcal)',
-    price: 27,
+    src: '/images/Gallery/penanamandurian.jpg',
+    name: 'Penanaman Durian',
   },
 ]
 
 const FullMenuData: FullMenuType[] = [
   {
-    name: 'Grilled Salmon',
-    price: '$18.99',
-    description: 'Served with lemon butter sauce and grilled vegetables.',
+    name: 'Salmon Panggang',
+    price: 'Rp 185.000',
+    description: 'Disajikan dengan saus mentega lemon dan sayuran panggang.',
   },
   {
-    name: 'Caesar Salad',
-    price: '$9.99',
-    description: 'Crisp romaine with parmesan, croutons, and Caesar dressing.',
+    name: 'Salad Caesar',
+    price: 'Rp 95.000',
+    description: 'Selada renyah dengan keju parmesan, remahan roti panggang, dan saus Caesar.',
   },
   {
-    name: 'Margherita Pizza',
-    price: '$13.49',
-    description: 'Classic pizza with tomato, mozzarella, and fresh basil.',
+    name: 'Piza Margherita',
+    price: 'Rp 135.000',
+    description: 'Piza klasik dengan saus tomat, keju mozarila, dan daun kemangi segar.',
   },
   {
-    name: 'Tomato Basil Soup',
-    price: '$6.99',
-    description: 'Creamy tomato soup with a hint of garlic and fresh basil.',
+    name: 'Sup Tomat Kemangi',
+    price: 'Rp 65.000',
+    description: 'Sup tomat kental dengan aroma bawang putih dan kemangi segar.',
   },
   {
-    name: 'Chocolate Lava Cake',
-    price: '$7.99',
+    name: 'Kue Cokelat Lava',
+    price: 'Rp 75.000',
     description:
-      'Warm chocolate cake with a molten center served with vanilla ice cream.',
+      'Kue cokelat hangat dengan lelehan cokelat di dalamnya, disajikan bersama es krim vanila.',
   },
   {
-    name: 'Spaghetti Carbonara',
-    price: '$15.25',
+    name: 'Spageti Carbonara',
+    price: 'Rp 150.000',
     description:
-      'Spaghetti tossed with eggs, pancetta, parmesan, and black pepper.',
+      'Spageti lezat yang dimasak dengan telur, daging asap, keju parmesan, dan lada hitam.',
   },
   {
     name: 'Tiramisu',
-    price: '$8.50',
+    price: 'Rp 85.000',
     description:
-      'Layered espresso-soaked ladyfingers with mascarpone and cocoa.',
+      'Kue lapis biskuit kopi disiram saus mascarpone halus dan taburan bubuk kakao.',
   },
 ]
 
 const FooterLinkData: FooterLinkType[] = [
   {
-    section: 'Company',
+    section: 'Navigasi',
     links: [
-      { label: 'Home', href: '/' },
-      { label: 'About Us', href: '/#aboutus' },
-      { label: 'Menu', href: '/#menu' },
-      { label: 'Reserve Table', href: '/#reserve' },
+      { label: 'Beranda', href: '/' },
+      { label: 'Tentang Sagalaraja', href: '/#aboutus' },
+      { label: 'Organisasi', href: '/#organisasi' }, // UBAH INI JUGA
+      { label: 'Informasi', href: '/#informasi' },
+      { label: 'Galeri', href: '/documentation' }
     ],
   },
-  {
-    section: 'Support',
-    links: [
-      { label: 'Help/FAQ', href: '/' },
-      { label: 'Press', href: '/' },
-      { label: 'Affiliates', href: '/' },
-      { label: 'Hotel owners', href: '/' },
-      { label: 'Partners', href: '/' },
-    ],
-  },
+  // {
+  //   section: 'Bantuan',
+  //   links: [
+  //     { label: 'Bantuan & FAQ', href: '/' },
+  //     { label: 'Rilis Pers', href: '/' },
+  //     { label: 'Program Afiliasi', href: '/' },
+  //     { label: 'Mitra Hotel', href: '/' },
+  //     { label: 'Kemitraan', href: '/' },
+  //   ],
+  // },
 ]
 
 export const GET = () => {
