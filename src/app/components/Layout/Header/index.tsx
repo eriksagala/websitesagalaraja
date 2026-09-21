@@ -12,16 +12,21 @@ import { HeaderItem } from '@/app/types/menu'
 
 const Header: React.FC = () => {
   const [headerLink, setHeaderLink] = useState<HeaderItem[]>([])
-
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [sticky, setSticky] = useState(false)
   const [isSignInOpen, setIsSignInOpen] = useState(false)
   const [isSignUpOpen, setIsSignUpOpen] = useState(false)
+  const [isMounted, setIsMounted] = useState(false) // <-- Penambahan pencegah hydration error
 
   const navbarRef = useRef<HTMLDivElement>(null)
   const signInRef = useRef<HTMLDivElement>(null)
   const signUpRef = useRef<HTMLDivElement>(null)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
+
+  // Pastikan komponen sudah termount di client
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -80,6 +85,17 @@ const Header: React.FC = () => {
     }
   }, [isSignInOpen, isSignUpOpen, navbarOpen])
 
+  // Cegah render berbeda antara server dan client sebelum mounted
+  if (!isMounted) {
+    return (
+      <header className="fixed top-0 z-40 py-4 w-full bg-white shadow-none">
+        <div className="container-fluid flex items-center justify-between px-3">
+          <Logo />
+        </div>
+      </header>
+    )
+  }
+
   return (
     <header
       className={`fixed top-0 z-40 py-4 w-full transition-all duration-300 ${
@@ -90,28 +106,12 @@ const Header: React.FC = () => {
           <div>
             <Logo />
           </div>
-          <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6  justify-end'>
+          <nav className='hidden lg:flex grow items-center gap-4 xl:gap-6 justify-end'>
             {headerLink.map((item, index) => (
               <HeaderLink key={index} item={item} />
             ))}
           </nav>
           <div className='flex items-center gap-2 lg:gap-3'>
-            {/* <Link
-              href='#'
-              className='text-lg font-medium hover:text-primary hidden xl:block'>
-              <Icon
-                icon='solar:phone-bold'
-                className='text-primary text-3xl lg:text-2xl inline-block me-2'
-              />
-              +1(909) 235-9814
-            </Link> */}
-            {/* <button
-              className='hidden lg:block text-primary duration-300 bg-primary/15 hover:text-white hover:bg-primary font-medium text-lg py-2 px-6 rounded-full hover:cursor-pointer'
-              onClick={() => {
-                setIsSignInOpen(true)
-              }}>
-              Sign In
-            </button> */}
             {isSignInOpen && (
               <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
                 <div
@@ -132,13 +132,6 @@ const Header: React.FC = () => {
                 </div>
               </div>
             )}
-            {/* <button
-              className='hidden lg:block bg-primary duration-300 text-white hover:bg-primary/15 hover:text-primary font-medium text-lg py-2 px-6 rounded-full hover:cursor-pointer'
-              onClick={() => {
-                setIsSignUpOpen(true)
-              }}>
-              Sign Up
-            </button> */}
             {isSignUpOpen && (
               <div className='fixed top-0 left-0 w-full h-full bg-black/50 flex items-center justify-center z-50'>
                 <div
@@ -181,7 +174,6 @@ const Header: React.FC = () => {
             <div>
               <Logo />
             </div>
-            {/*  */}
             <button
               onClick={() => setNavbarOpen(false)}
               className="hover:cursor-pointer"
@@ -194,22 +186,13 @@ const Header: React.FC = () => {
               />
             </button>
           </div>
-          <Link
-            href='#'
-            className='text-lg font-medium hover:text-primary block md:hidden mt-6 p-4'>
-            <Icon
-              icon='solar:phone-bold'
-              className='text-primary text-3xl lg:text-2xl inline-block me-2'
-            />
-            +1(909) 235-9814
-          </Link>
           <nav className='flex flex-col items-start p-4'>
             {headerLink.map((item, index) => (
               <MobileHeaderLink key={index} item={item} />
             ))}
             <div className='mt-4 flex flex-col space-y-4 w-full'>
               <button
-                className='bg-primary text-white px-4 py-2 rounded-lg border  border-primary hover:text-primary hover:bg-transparent hover:cursor-pointer transition duration-300 ease-in-out'
+                className='bg-primary text-white px-4 py-2 rounded-lg border border-primary hover:text-primary hover:bg-transparent hover:cursor-pointer transition duration-300 ease-in-out'
                 onClick={() => {
                   setIsSignInOpen(true)
                   setNavbarOpen(false)
@@ -217,7 +200,7 @@ const Header: React.FC = () => {
                 Sign In
               </button>
               <button
-                className='bg-primary text-white px-4 py-2 rounded-lg border  border-primary hover:text-primary hover:bg-transparent hover:cursor-pointer transition duration-300 ease-in-out'
+                className='bg-primary text-white px-4 py-2 rounded-lg border border-primary hover:text-primary hover:bg-transparent hover:cursor-pointer transition duration-300 ease-in-out'
                 onClick={() => {
                   setIsSignUpOpen(true)
                   setNavbarOpen(false)
@@ -233,4 +216,3 @@ const Header: React.FC = () => {
 }
 
 export default Header
-// 082160879174

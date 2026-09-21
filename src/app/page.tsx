@@ -1,10 +1,10 @@
 import React from 'react'
-import Hero from '@/app/components/Home/Hero'
+import Hero from '@/app/components/Home/Beranda'
+import About from '@/app/components/Home/About'
 import Features from '@/app/components/Home/Features'
-import Cook from '@/app/components/Home/Cook'
-import Expert from '@/app/components/Home/Expert'
-import Gallery from '@/app/components/Home/Gallery'
-import Newsletter from '@/app/components/Home/Newsletter'
+import Expert from '@/app/components/Home/Organisasi'
+import Gallery from '@/app/components/Home/Informasi'
+import Newsletter from '@/app/components/Home/Galeri'
 import { Metadata } from 'next'
 import ContactForm from './components/Contact/Form'
 export const metadata: Metadata = {
@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <About />
       <Features />
-      <Cook />
       <Expert />
       <Gallery />
       <ContactForm />

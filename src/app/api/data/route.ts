@@ -51,77 +51,76 @@ const FeaturesData: FeaturesType[] = [
 const ExpertChiefData: ExpertChiefType[] = [
   {
     profession: 'Ketua Umum',
-    name: 'Drs. Maringan Sagala',
-    imgSrc: '/images/Expert/boyone.png',
-  },
-  {
-    profession: 'Ketua I',
-    name: 'Brigjen TNI (Purn) Hotman Sagala',
-    imgSrc: '/images/Expert/girl.png',
-  },
-  {
-    profession: 'Ketua II',
-    name: 'Reinhard Erwin Sagala',
-    imgSrc: '/images/Expert/placeholder.png', // Gambar siluet netral
-  },
-  {
-    profession: 'Wakil Ketua II',
-    name: 'Dr. Wannen Pakpahan',
+    name: 'St. Drs. Maringan Sagala',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
+    profession: 'Ketua I',
+    name: 'Brigjen (Purn. AD) Hotman Sagala',
+    imgSrc: '/images/Expert/placeholder.png',
+  },
+  {
+    profession: 'Ketua II',
+    name: 'Erwin Sagala, S.E.',
+    imgSrc: '/images/Expert/placeholder.png', // Gambar siluet netral
+  },
+  {
     profession: 'Ketua III',
-    name: 'Ir. Joakim Sagala',
+    name: 'Ir. Darlin Sagala, M.Si.',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
     profession: 'Ketua IV',
-    name: 'Dr. MJP Sagala',
+    name: 'Ir. Joakim Sagala',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
     profession: 'Ketua V',
-    name: 'Hasan Basri Sagala',
+    name: 'H. Hasan Basri Sagala, S.E.',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
     profession: 'Ketua VI',
-    name: 'Joni Sagala',
+    name: 'Joni Sagala, S.E.',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
     profession: 'Sekretaris Jenderal',
-    name: 'Josua Sagala, S.Sos',
+    name: 'Josua Sagala, S.Sos.',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
     profession: 'Sekretaris I',
-    name: 'Erik Sagala, S.Kom',
-    imgSrc: '/images/Expert/placeholder.png',
+    name: 'Erik Sagala, S.Kom.',
+    imgSrc: '/images/Expert/erik.jpg',
+    ttl: 'Perawang, 02 Mei 1995',
+    jobProfession: 'IT Data and MIS Specialist',
+    commitment: 'Aktif dalam kepengurusan Pengurus Pusat Sagala Raja, mengelola administrasi kesekretariatan secara profesional, dan melestarikan nilai-nilai kekeluargaan antaranggota.',
   },
   {
     profession: 'Sekretaris II',
-    name: 'Herdin Sagala',
+    name: 'Herdin Sagala, S.Sos., M.Si.',
     imgSrc: '/images/Expert/placeholder.png',
+    bio: 'Lahir di Tapanuli Utara, 15 Juni 1990. Berprofesi sebagai Administrasi Perkantoran. Aktif dalam kepengurusan Pengurus Pusat Sagala Raja serta berkomitmen penuh dalam memajukan organisasi dan melestarikan nilai-nilai kekeluargaan.',
   },
   {
     profession: 'Sekretaris III',
-    name: 'Jaharap Sagala',
+    name: 'Drs. Jaharap Sagala',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
     profession: 'Sekretaris IV',
-    name: 'Flores Sagala, SE',
+    name: 'Flores Sagala, S.E.',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
     profession: 'Bendahara Umum',
-    name: 'Dr. Wannen Pakpahan',
+    name: 'Dr. Wannen Pakpahan, M.M.',
     imgSrc: '/images/Expert/placeholder.png',
   },
   {
     profession: 'Wakil Bendahara Umum',
-    name: 'Winter Sigiro',
+    name: 'Pnt. Winter Sigiro, S.H., M.H.',
     imgSrc: '/images/Expert/placeholder.png',
   },
 
@@ -129,24 +128,20 @@ const ExpertChiefData: ExpertChiefType[] = [
 
 const GalleryImagesData: GalleryImagesType[] = [
   {
-    src: '/images/Gallery/tugupolos.png',
-    name: 'Salad Caesar (187 Kcal)',
-    price: 35,
+    src: '/images/Gallery/pestabolon.jpg',
+    name: 'Pesta Bolon Sagalaraja Se-Dunia',
   },
   {
-    src: '/images/Gallery/foodtwo.webp',
-    name: 'Salad Natal (118 Kcal)',
-    price: 17,
+    src: '/images/Gallery/martumba.jpg',
+    name: 'Martumba dan Tari Sawan',
   },
   {
-    src: '/images/Gallery/foodthree.webp',
-    name: 'Tumis Jamur Mangkuk Labu (238 Kcal)',
-    price: 45,
+    src: '/images/Gallery/pelantikan.jpg',
+    name: 'Pelantikan BPH Periode 2026-2030',
   },
   {
-    src: '/images/Gallery/foodfour.webp',
-    name: 'Piza Ayam Barbekyu (272 Kcal)',
-    price: 27,
+    src: '/images/Gallery/penanamandurian.jpg',
+    name: 'Penanaman Durian',
   },
 ]
 
